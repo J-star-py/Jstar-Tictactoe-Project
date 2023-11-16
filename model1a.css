@@ -37,6 +37,7 @@ body {
   background-color: rgb(176, 222, 255);
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 0.26vw rgb(37, 44, 100);
+  margin: 0px;
 
   cursor: pointer;
 
