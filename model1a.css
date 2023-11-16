@@ -40,6 +40,10 @@ body {
 
   cursor: pointer;
 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
   transition: background-color 0.15s, box-shadow 0.15s;
 }
 #resetButton:hover {
