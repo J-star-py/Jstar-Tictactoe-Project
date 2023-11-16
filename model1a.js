@@ -28,7 +28,7 @@ function createCells(i) {
     if (board.filter(x => x===0).length === 0) {
       return
     }
-    if (board[i] !== 0) {
+    if (board[i] !== 0 && !blocker && !gameEnd) {
       document.body.querySelector("#visor p").innerText = "Ocuppied";
     }
     if (board[i] === 0 && !blocker && !gameEnd) {
