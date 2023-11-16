@@ -50,6 +50,9 @@ body {
 #resetButton:hover {
   background-color: rgb(134, 205, 255);
 }
+#resetButton p {
+  margin:0px;
+}
 
 #switchButton {
   position: absolute;
