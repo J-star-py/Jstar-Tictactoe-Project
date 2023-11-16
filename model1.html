@@ -13,7 +13,7 @@
   <body>
     <div id="gameTable">
       <div id="board">
-        <button id="resetButton" onclick="resetButtonPress(true)"></button>
+        <button id="resetButton" onclick="resetButtonPress(true)"><p></p></button>
         <button id="switchButton" onclick="switchButtonPress()">1</button>
       </div>
       <div id="footer">
@@ -23,7 +23,7 @@
       </div>
     </div>
     <script>
-      document.getElementById("resetButton").innerHTML = "&#8634;";
+      document.body.querySelector("#resetButton p").innerHTML = "&#8634;";
     </script>
   </body>
 </html>
