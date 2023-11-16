@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px) {
   body {
     font-weight: bold;
+    background-color: yellow;
   }
 
   #gameTable {
