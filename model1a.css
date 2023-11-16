@@ -1,0 +1,171 @@
+html,
+body {
+  min-width: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: fit-content;
+  margin: 0px;
+  padding: 3vw 0px 1vw 0px;
+  background-color: rgb(226, 231, 238);
+
+  user-select: none;
+  position: relative;
+}
+
+#gameTable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+#resetButton {
+  position: absolute;
+  left: -9vw;
+
+  width: 4vw;
+  height: 4vw;
+  border-radius: 100%;
+  border: 0.11vw solid black;
+  font-family: Arial;
+  font-size: 3vw;
+  background-color: rgb(176, 222, 255);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 0.26vw rgb(37, 44, 100);
+
+  cursor: pointer;
+
+  transition: background-color 0.15s, box-shadow 0.15s;
+}
+#resetButton:hover {
+  background-color: rgb(134, 205, 255);
+}
+
+#switchButton {
+  position: absolute;
+  left: -9vw;
+  top: 7vw;
+
+  font-family: Arial;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 100%;
+  border: 0.11vw solid black;
+  font-size: 2.2vw;
+  font-weight: bold;
+  background-color: rgb(255, 120, 120);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 0.21vw rgb(55, 63, 128);
+
+  cursor: pointer;
+  transition: background-color 1s, text-shadow 0.15s, box-shadow 0.15s;
+}
+#switchButton:hover {
+  text-shadow: 0px 0px 0.92vw white;
+}
+#resetButton:active,
+#switchButton:active,
+#resetButton:focus,
+#switchButton:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#board {
+  width: 30vw;
+  height: 30vw;
+
+  display: grid;
+  grid-template-columns: 9vw 9vw 9vw;
+  row-gap: 1.5vw;
+  column-gap: 1.5vw;
+
+  position: relative;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  border: 0.21vw solid black;
+
+  border-radius: 10%;
+
+  cursor: pointer;
+  transition: box-shadow 0.1s, border-color 0.1s;
+}
+.cell:hover {
+  box-shadow: 0px 0px 0.65vw rgb(93, 228, 93);
+}
+.cell:active,
+.cell:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.cell p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial;
+  font-size: 5vw;
+  font-weight: bold;
+  margin: 0px;
+
+  height: 3vw;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3.3vw;
+
+  font-family: Arial;
+  font-weight: bold;
+  border: 0.21vw solid black;
+  border-radius: 5vw;
+  height: 6.5vw;
+  width: 32vw;
+
+  overflow: hidden;
+}
+.punctuation {
+  width: 8vw;
+  color: white;
+  font-size: 3vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#redPunctuation {
+  background-color: rgb(255, 120, 120);
+}
+#bluePunctuation {
+  background-color: rgb(120, 120, 255);
+}
+
+#visor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: 2vw;
+  padding: 0px 2vw;
+  line-height: 2.5vw;
+  text-align: center;
+  background-color: white;
+}
+#visor p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

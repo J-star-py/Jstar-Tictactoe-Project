@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="model1a.css" />
+    <link rel="stylesheet" href="model1b.css" />
+    <script src="model1a.js" defer></script>
+    <script src="model1b.js" defer></script>
+  </head>
+  <body>
+    <div id="gameTable">
+      <div id="board">
+        <button id="resetButton" onclick="resetButtonPress(true)"></button>
+        <button id="switchButton" onclick="switchButtonPress()">1</button>
+      </div>
+      <div id="footer">
+        <div class="punctuation" id="redPunctuation"><p>0</p></div>
+        <div id="visor"><p>Occupied</p></div>
+        <div class="punctuation" id="bluePunctuation"><p>0</p></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("resetButton").innerHTML = "&#8634;";
+    </script>
+  </body>
+</html>
