@@ -38,38 +38,54 @@ function verificacionEstado(tablero=[]) {
 }
 
 let contador = 0
-function negamax(tablero, depth = 0, alfa = Number.NEGATIVE_INFINITY, beta = Number.POSITIVE_INFINITY) {
+function negamax(tablero, depth = 0, memo = {}) {
+  if (depth === 0){
+    memo = {};
+    contador = 0}
   contador++
-    if (tablero.toString() === "0,0,0,0,0,0,0,0,0") {
-      let posicionA = Math.floor(Math.random()*9);
-      return [tablero.slice(undefined,posicionA).concat([1]).concat(tablero.slice(posicionA+1,undefined)), "inicio"]
-    }
 
-    if (depth === 0 && !tablero.includes(0)) {return [tablero, "nada"]}
+  if (Object.keys(memo).includes(tablero.toString())) {
+    return memo[tablero.toString()]
+  }
 
-    let estado = verificacionEstado(tablero)[0];
-    if (estado !== null) {return 0-(estado - ((estado % 10)*depth))}
+  if (tablero.toString() === "0,0,0,0,0,0,0,0,0") {
+    let posicionA = Math.floor(Math.random()*9);
+    return [tablero.slice(undefined,posicionA).concat([1]).concat(tablero.slice(posicionA+1,undefined)), "inicio"]
+  }
+
+  if (depth === 0 && !tablero.includes(0)) {return [tablero, "nada"]}
+
+  let estado = verificacionEstado(tablero)[0];
+  if (estado !== null) {return 0-(estado - ((estado % 10)*depth))}
     
 
-    let mejorJugada = [];
-    let mejor = Number.NEGATIVE_INFINITY;
-    let posiblesJugadas = segundaIABasica(tablero)[0];
+  let mejoresJugadas = [];
+  let mejor = Number.NEGATIVE_INFINITY;
+  let posiblesJugadas = segundaIABasica(tablero)[0];
 
-    for (let i = 0; i < posiblesJugadas.length; i++) {
-      let resultado = 0-negamax(posiblesJugadas[i], depth+1, 0-beta, 0-alfa);
+  for (let i = 0; i < posiblesJugadas.length; i++) {
+    let resultado = 0-negamax(posiblesJugadas[i], depth+1, memo);
 
-      if (alfa>=beta) {return beta}
-      if (resultado > mejor) {
-        mejor = resultado;
-        alfa = mejor;
-        if (depth === 0) {mejorJugada = posiblesJugadas[i]}
+    if (depth === 0) {
+      console.log(resultado, posiblesJugadas[i])
+      if (resultado === mejor) {
+        mejoresJugadas.push(posiblesJugadas[i])
       }
     }
+
+    if (resultado > mejor) {
+      mejor = resultado;
+      if (depth === 0) {mejoresJugadas = [posiblesJugadas[i]]}
+    }
+  }
     if (depth === 0) {
       console.log(contador)
-      return [mejorJugada, mejor]}
+      let randInd = Math.floor(((Math.random())*(mejoresJugadas.length)));
+      console.log(mejoresJugadas, randInd)
+      return [mejoresJugadas[randInd], mejor]}
+    memo[tablero.toString()] = mejor;
     return mejor;
-   }
+}
 
 
 function getPosition(tablero, tablero2) {
