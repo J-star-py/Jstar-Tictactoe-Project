@@ -67,7 +67,7 @@ function negamax(tablero, depth = 0, memo = {}) {
     let resultado = 0-negamax(posiblesJugadas[i], depth+1, memo);
 
     if (depth === 0) {
-      console.log(resultado, posiblesJugadas[i])
+      //console.log(resultado, posiblesJugadas[i])
       if (resultado === mejor) {
         mejoresJugadas.push(posiblesJugadas[i])
       }
@@ -79,9 +79,9 @@ function negamax(tablero, depth = 0, memo = {}) {
     }
   }
     if (depth === 0) {
-      console.log(contador)
+      //console.log(contador)
       let randInd = Math.floor(((Math.random())*(mejoresJugadas.length)));
-      console.log(mejoresJugadas, randInd)
+      //console.log(mejoresJugadas, randInd)
       return [mejoresJugadas[randInd], mejor]}
     memo[tablero.toString()] = mejor;
     return mejor;
