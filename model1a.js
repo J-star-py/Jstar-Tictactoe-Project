@@ -54,6 +54,7 @@ function evaluateState() {
 
 function callAI() {
   let time = 600;
+  console.log("Line 57", !board.includes(1));
   if (!board.includes(1)) {
     console.log("Line 58");
     time = 000};
