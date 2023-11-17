@@ -62,7 +62,7 @@ function callAI() {
       time = 0;
       console.log("celu");
     } else {
-      cosole.log("compu");
+      console.log("compu");
       time = 268;
     }
     //console.log("Line 58 4", !board.includes(2) && board.includes(1));
