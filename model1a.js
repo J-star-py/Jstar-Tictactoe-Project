@@ -3,7 +3,7 @@ let cells = []
 let blocker = false
 let gameEnd = false
 
-document.body.backgroundColor = yellow;
+document.body.backgroundColor = "yellow";
 
 function turn() {
   let ceros = 0;
