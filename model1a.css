@@ -52,7 +52,8 @@ body {
 }
 #resetButton img {
   width: 3.7vw;
-  height: 3.7vw;
+  max-width: 100%;
+  height:auto;
 }
 
 #switchButton {
