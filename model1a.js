@@ -53,6 +53,8 @@ function evaluateState() {
 
 
 function callAI() {
+  let time = 600
+  if (!board.includes(1)) {time = 200};
   setTimeout(function(){
     if (gameEnd) {return};
   
@@ -62,7 +64,7 @@ function callAI() {
       
     blocker = false
     //console.log(false); 
-  }, 600)
+  }, time)
   
 }
 
