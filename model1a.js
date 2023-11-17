@@ -33,7 +33,7 @@ function createCells(i) {
     }
     if (board[i] === 0 && !blocker && !gameEnd) {
       blocker = true;
-      console.log(true)
+      //console.log(true)
       playMove(i);
       if (!gameEnd) {callAI()};
     } 
@@ -61,7 +61,7 @@ function callAI() {
     playMove(posicion)
       
     blocker = false
-    console.log(false); 
+    //console.log(false); 
   }, 600)
   
 }
@@ -99,7 +99,7 @@ function endGame(result) {
 
 function resetButtonPress(key = false) {
   if (blocker && !gameEnd) {
-    console.log("DKDK")
+    //console.log("DKDK")
     return}
   blocker = true
   gameEnd = false
