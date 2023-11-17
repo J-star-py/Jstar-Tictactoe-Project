@@ -3,8 +3,6 @@ let cells = []
 let blocker = false
 let gameEnd = false
 
-document.body.backgroundColor = "yellow";
-
 function turn() {
   let ceros = 0;
   for (let i = 0; i < 9; i++) {
@@ -58,13 +56,7 @@ function callAI() {
   let time = 600;
   //console.log("Line 57 4", !board.includes(1));
   if (!board.includes(2) && board.includes(1)) {
-    if (window.matchMedia("(max-width: 600px)").matches) {
-      time = 0;
-      console.log("celu");
-    } else {
-      console.log("compu");
       time = 268;
-    }
     //console.log("Line 58 4", !board.includes(2) && board.includes(1));
     };
   setTimeout(function(){
