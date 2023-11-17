@@ -54,10 +54,10 @@ function evaluateState() {
 
 function callAI() {
   let time = 600;
-  console.log("Line 57 2", !board.includes(1));
+  console.log("Line 57 4", !board.includes(1));
   if (!board.includes(2) && board.includes(1)) {
-    console.log("Line 58 3", !board.includes(2) && board.includes(1));
-    time = 300};
+    console.log("Line 58 4", !board.includes(2) && board.includes(1));
+    time = 250};
   setTimeout(function(){
     if (gameEnd) {return};
   
