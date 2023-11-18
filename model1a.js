@@ -56,7 +56,7 @@ function callAI() {
   let time = 600;
   //console.log("Line 57 4", !board.includes(1));
   if (!board.includes(2) && board.includes(1)) {
-      time = 268;
+      time = 230;
     //console.log("Line 58 4", !board.includes(2) && board.includes(1));
     };
   setTimeout(function(){
